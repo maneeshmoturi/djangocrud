@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% block content %}
+    <form action = "add" method ="posts">
+    {% csrf_token %}
+        <h1>Employee Form</h1>
+    Name:<br><input type="text" name="name"/><br>
+    Password:<br><input type="password" name="PWD"/><br>
+    Address:<br><textarea name="address" cols="25" rows="5"></textarea><br>
+    City:<br><select name="city" id="city">
+        <option value="Select a city" class = "city">Select a city</option>
+        <option value="Hyderabad" class = "city">Hyderabad</option>
+        <option value="Chennai" class = "city" >Chennai</option>
+        <option value="Mumbai" class = "city">Mumbai</option>
+        <option value="Delhi" class = "city">Delhi</option>
+        <option value="Kolkata" class = "city">Kolkata</option>
+
+      </select><br>
+    Gender:<br><input type="radio" id="gm" name="gender" value="male">
+    <label for="gm">Male</label><br>
+    <input type="radio" id="gf" name="gender" value="female">
+    <label for="gf">Female</label><br>
+    <input type="radio" id="go" name="gender" value="other">
+    <label for="go">other</label><br>
+
+
+
+    Vehicle:<br><input type="checkbox" id="car" name="vehicle" value="car">Car
+
+    <input type="checkbox" id="scooter" name="vehicle" value="scooter" >Scooter
+    <input type="checkbox" id="bike" name="vehicle" value="bike">Bike<br>
+
+    Salary:<br><input type="number" name="salary"/><br>
+    Date of Birth:<br><input type="date" name="dob"/><br><br>
+
+    <input type="submit" value="Submit"  class ="btn"/>
+</form>
+<style>
+    .btn{
+            background-color: #AA336A;
+            color: white;
+            width: 120px;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            height:70px;
+            width:90px;
+    }
+    .city{
+            margin-top: 70px;
+
+    }
+    .tbox{
+
+</style>
+
+{% endblock %}
